@@ -1,0 +1,150 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+<script>
+  var array = ['arry','일','이','삼','사','오','육','칠','팔','구','십','십일','십이','십삼','십사','십오','십육','십칠','십팔','십구','이십'];
+  var oldValue =new Array();
+  var  count = 1; 
+  var  count1= 1;
+ 
+function odd(){
+
+	
+	if(count ==1 ){
+	
+	for(var i = 1; i <= 20; i++){
+	
+	var a = document.getElementById(i).value; 
+
+	
+    
+    
+     if(i% 2 !=0){ //홀수면
+         oldValue[i] =document.getElementById(i).value; 
+    	document.getElementById(i).value = array[i];
+		 }
+	}
+		count = count+1; 
+        return;
+	 }
+
+	
+    
+    
+   	if(count ==2){
+	
+	for(var j= 1; j<= 20; j++){
+    
+     if(j % 2 !=0){ //홀수면
+     
+    	document.getElementById(j).value = oldValue[j];
+        
+		 }
+         
+	}
+		count = count-1;
+}
+
+
+
+
+}//end of function 
+
+
+
+
+
+function even(){
+	
+    if(count1 ==1){
+	for(var i = 1; i <= 20; i++){
+	
+	var a = document.getElementById(i).value; 
+	//r number = Number(a); 
+    
+    
+    if(i% 2 ==0){ //짝수면... 
+    	oldValue[i] =document.getElementById(i).value; 
+    	document.getElementById(i).value = array[i];
+
+    		}
+		}
+        
+        count1 = count1+1; 
+        return; 
+    }
+    
+    
+    
+       	if(count1==2){
+	
+	for(var j= 1; j<= 20; j++){
+    
+     if(j % 2 ==0){ //짝수면
+     
+    	document.getElementById(j).value = oldValue[j];
+        
+		 }
+         
+	}
+		count1= count1-1;
+}
+    
+    
+}//end of function 
+
+
+
+  </script>
+
+ </head>
+ <body>
+  
+  <table border="1" width="100" height="100">
+ 
+  <tr>
+<td><input type="text" value="1" id="1"></td>
+<td><input type="text" value="2" id="2"></td>
+<td><input type="text" value="3" id="3"></td>
+<td><input type="text" value="4" id="4"></td>
+<td><input type="text" value="5" id="5"></td>
+</tr>
+  <tr>
+
+</tr>
+<td><input type="text" value="6" id="6"></td>
+<td><input type="text" value="7" id="7"></td>
+<td><input type="text" value="8" id="8"></td>
+<td><input type="text" value="9" id="9"></td>
+<td><input type="text" value="10" id="10"></td>
+  <tr>
+
+</tr>
+<td><input type="text" value="11" id="11"></td>
+<td><input type="text" value="12" id="12"></td>
+<td><input type="text" value="13" id="13"></td>
+<td><input type="text" value="14" id="14" ></td>
+<td><input type="text" value="15" id="15"></td>
+  <tr>
+
+
+</tr>
+<td><input type="text" value="16" id="16"></td>
+<td><input type="text" value="17" id="17"></td>
+<td><input type="text" value="18" id="18"></td>
+<td><input type="text" value="19" id="19"></td>
+<td><input type="text" value="20" id="20"></td>
+  <tr>
+
+</tr>
+  </table>
+   <input type="button" value="홀수" onClick="odd()">
+<input type="button" value="짝수" onClick="even()">
+ </body>
+</html>
