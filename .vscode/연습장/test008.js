@@ -10,7 +10,9 @@ Person.prototype.getName = function(){
 function Korean(name){  
   this.name = name;
 }    
-Korean.prototype = Person.prototype;
+Korean.prototype = Object.create(Person.prototype);
+//Korean.prototype = Person.prototype; 
+
 //자식 함수의 prototype 속성을 부모 함수의 prototype 속성이 참조하는 객체로 설정했다. 
 //부모 함수로 생성한 객체가 없고(Korean.prototype = new Person, 이 부분이 없다.)
 //부모 함수의 prototype 객체로 링크가 참조되는 것을 볼 수 있다. 
