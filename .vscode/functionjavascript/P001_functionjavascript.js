@@ -15,7 +15,6 @@ function _curry2(fn){
 
 
 }
-sadfsadfsadf
 var add1  = _curry2(function(a,b){
 		console.log(b,a); 
 		return a +b  ; 
